@@ -101,27 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const grid = document.getElementById("galleryGrid");
   if (grid) {
     const galleryArt = [
-      { cls: "wide", c: ["#5e2a30", "#b15b3c", "#e8b87c"] },
-      { cls: "", c: ["#6b6f47", "#4d5235", "#3c4029"] },
-      { cls: "tall", c: ["#5a1f2b", "#7a2e38", "#3c1a22"] },
-      { cls: "", c: ["#b15b3c", "#c2974a", "#e8b87c"] },
-      { cls: "", c: ["#4d5235", "#6b6f47", "#c2974a"] },
-      { cls: "wide", c: ["#34121b", "#5a1f2b", "#9e2f4a"] },
-      { cls: "", c: ["#c2b06a", "#d8c98a", "#6b6f47"] }
+      { cls: "wide", src: "images/vineyard.jpg", alt: "Nightingale vineyard landscape" },
+      { cls: "", src: "images/vineyard2.jpg", alt: "Vineyard rows" },
+      { cls: "tall", src: "images/vineyard-harvest.jpg", alt: "Vineyard harvest workers" },
+      { cls: "", src: "images/vineyard3.jpg", alt: "Vineyard view" },
+      { cls: "", src: "images/vineyard.jpg", alt: "Estate vineyard" },
+      { cls: "wide", src: "images/vineyard2.jpg", alt: "Grape vines" },
+      { cls: "", src: "images/vineyard3.jpg", alt: "Vineyard sunset" }
     ];
     galleryArt.forEach(function (g, i) {
       const fig = document.createElement("figure");
       fig.className = g.cls;
       fig.dataset.i = i;
-      fig.innerHTML =
-        '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">' +
-        '<defs><linearGradient id="ga' + i + '" x1="0" y1="0" x2="1" y2="1">' +
-        '<stop offset="0" stop-color="' + g.c[0] + '"/>' +
-        '<stop offset=".55" stop-color="' + g.c[1] + '"/>' +
-        '<stop offset="1" stop-color="' + g.c[2] + '"/></linearGradient></defs>' +
-        '<rect width="400" height="300" fill="url(#ga' + i + ')"/>' +
-        '<circle cx="' + (90 + i * 22) + '" cy="150" r="80" fill="none" stroke="#f7f2ea" stroke-width="1.5" opacity=".35"/>' +
-        '<path d="M0 220 Q200 180 400 220 V300 H0Z" fill="rgba(52,18,27,.25)"/></svg>';
+      const img = document.createElement("img");
+      img.src = g.src;
+      img.alt = g.alt;
+      fig.appendChild(img);
       grid.appendChild(fig);
     });
   }
@@ -135,7 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const figs = [...grid.querySelectorAll("figure")];
       if (!figs.length) return;
       current = (i + figs.length) % figs.length;
-      lbStage.innerHTML = figs[current].querySelector("svg").outerHTML;
+      const img = figs[current].querySelector("img");
+      if (img) {
+        const imgClone = img.cloneNode();
+        lbStage.innerHTML = "";
+        lbStage.appendChild(imgClone);
+      }
       lb.classList.add("open");
       lb.setAttribute("aria-hidden", "false");
       body.classList.add("locked");
