@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nightingale Family · Estate Vineyard</title>
+<meta name="description" content="Nightingale Family — a luxury estate vineyard crafting small-batch wines with elegance since 1962." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locked">
+
+<!-- ===== Age Gate ===== -->
+<div class="gate" id="ageGate">
+  <div class="gate__inner">
+    <div id="gateMain">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30.5" fill="none" stroke="#dcb878" stroke-width="1.5"/>
+        <path d="M19 41 C23 26 36 22 47 19 C42 26 45 30 38 34 C45 33 47 36 42 41 C36 46 25 47 19 41 Z" fill="#dcb878"/>
+        <circle cx="41" cy="27" r="1.7" fill="#5a1f2b"/>
+      </svg>
+      <p class="eyebrow" style="color:#dcb878">Nightingale Family Vineyard</p>
+      <h2>Welcome</h2>
+      <p>You must be of legal drinking age to enter. Please confirm you are 21 years of age or older.</p>
+      <div class="gate__btns">
+        <button class="btn btn--gold" id="gateYes">Yes, I am 21+</button>
+        <button class="btn btn--ghost" id="gateNo">I am under 21</button>
+      </div>
+      <small>Please enjoy our wines responsibly.</small>
+    </div>
+    <div class="gate__deny" id="gateDeny">
+      <h2>Our Apologies</h2>
+      <p>You must be 21 or older to enter this site. Please return when you're of legal drinking age.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <a class="logo" href="#home" aria-label="Nightingale Family home">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30.5" fill="none" stroke="#c2974a" stroke-width="1.5"/>
+      <circle cx="32" cy="32" r="26" fill="none" stroke="#c2974a" stroke-width=".6" opacity=".55"/>
+      <path d="M19 41 C23 26 36 22 47 19 C42 26 45 30 38 34 C45 33 47 36 42 41 C36 46 25 47 19 41 Z" fill="#5a1f2b"/>
+      <circle cx="41" cy="27" r="1.7" fill="#f7f2ea"/>
+      <path d="M47 19 C51 18 53 20 54 23" fill="none" stroke="#c2974a" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M19 41 C21 45 26 48 32 49" fill="none" stroke="#6b6f47" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <span class="logo__text">Nightingale<small>Family Vineyard</small></span>
+  </a>
+  <nav class="nav">
+    <a href="#home">Home</a><a href="#story">Estate</a><a href="#wines">Wines</a><a href="#gallery">Gallery</a><a href="#events">Events</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="burger" aria-label="Open menu">☰</button>
+</header>
+
+<!-- ===== Wine Slider (OakGrove-style hero) ===== -->
+<section class="slider" id="home" aria-roledescription="carousel" aria-label="Featured wines">
+  <article class="slide active">
+    <div class="slide__bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3c1420"/><stop offset=".5" stop-color="#5a1f2b"/><stop offset="1" stop-color="#8a3a2e"/></linearGradient></defs>
+        <rect width="1440" height="900" fill="url(#s1)"/>
+        <circle cx="1080" cy="240" r="150" fill="#dcb878" opacity=".12"/>
+        <path d="M0 640 Q480 580 960 650 T1440 630 V900 H0Z" fill="rgba(0,0,0,.2)"/>
+      </svg>
+    </div>
+    <div class="slide__overlay"></div>
+    <div class="slide__inner">
+      <p class="eyebrow">Signature Release · 2019</p>
+      <h1>Reserve<br/>Cabernet Sauvignon</h1>
+      <p>Blackcurrant, cedar, and dark cherry from our oldest hillside blocks. Aged twenty-two months in French oak.</p>
+      <div class="slide__cta"><a href="#wines" class="btn btn--gold">Discover the Wine</a></div>
+    </div>
+    <svg class="slide__bottle" viewBox="0 0 104 360" aria-hidden="true"><rect x="40" y="8" width="24" height="70" fill="#3c1a22"/><rect x="24" y="72" width="56" height="280" rx="16" fill="#5a1f2b"/><rect x="29" y="150" width="46" height="110" fill="#e9dfd1"/><text x="52" y="210" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="22" fill="#5a1f2b">N</text></svg>
+  </article>
+
+  <article class="slide">
+    <div class="slide__bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4d5235"/><stop offset=".55" stop-color="#6b6f47"/><stop offset="1" stop-color="#b15b3c"/></linearGradient></defs>
+        <rect width="1440" height="900" fill="url(#s2)"/>
+        <circle cx="320" cy="220" r="160" fill="#f9edd2" opacity=".14"/>
+        <g stroke="#3c4029" stroke-width="3" opacity=".4"><path d="M120 900 L360 590"/><path d="M500 900 L640 590"/><path d="M960 900 L1000 640"/></g>
+      </svg>
+    </div>
+    <div class="slide__overlay"></div>
+    <div class="slide__inner">
+      <p class="eyebrow">Limited Hillside Lot · 2021</p>
+      <h1>Hillside<br/>Pinot Noir</h1>
+      <p>Red raspberry and rose petal layered with forest floor. Silky and ethereal, grown on our cool north-facing slope.</p>
+      <div class="slide__cta"><a href="#wines" class="btn btn--gold">Discover the Wine</a></div>
+    </div>
+    <svg class="slide__bottle" viewBox="0 0 104 360" aria-hidden="true"><rect x="40" y="8" width="24" height="70" fill="#3c1a22"/><rect x="24" y="72" width="56" height="280" rx="16" fill="#7a2e38"/><rect x="29" y="150" width="46" height="110" fill="#e9dfd1"/><text x="52" y="210" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="22" fill="#7a2e38">N</text></svg>
+  </article>
+
+  <article class="slide">
+    <div class="slide__bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9e2f4a"/><stop offset=".5" stop-color="#b15b3c"/><stop offset="1" stop-color="#e8b87c"/></linearGradient></defs>
+        <rect width="1440" height="900" fill="url(#s3)"/>
+        <circle cx="1090" cy="235" r="120" fill="#f9edd2" opacity=".3"/>
+        <path d="M0 660 Q480 600 960 670 T1440 640 V900 H0Z" fill="rgba(255,255,255,.12)"/>
+      </svg>
+    </div>
+    <div class="slide__overlay"></div>
+    <div class="slide__inner">
+      <p class="eyebrow">Summer Favorite · 2023</p>
+      <h1>Sunset<br/>Rosé</h1>
+      <p>Wild strawberry, watermelon, and citrus blossom. Dry, crisp, and gently pressed from estate Pinot Noir.</p>
+      <div class="slide__cta"><a href="#wines" class="btn btn--gold">Discover the Wine</a></div>
+    </div>
+    <svg class="slide__bottle" viewBox="0 0 104 360" aria-hidden="true"><rect x="40" y="8" width="24" height="70" fill="#3c1a22"/><rect x="24" y="72" width="56" height="280" rx="16" fill="#9e2f4a"/><rect x="29" y="150" width="46" height="110" fill="#e9dfd1"/><text x="52" y="210" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="22" fill="#9e2f4a">N</text></svg>
+  </article>
+
+  <button class="slider__arrow slider__prev" id="slidePrev" aria-label="Previous slide">&#8249;</button>
+  <button class="slider__arrow slider__next" id="slideNext" aria-label="Next slide">&#8250;</button>
+  <div class="slider__dots" id="sliderDots"></div>
+</section>
+
+<!-- ===== Story ===== -->
+<section class="section" id="story">
+  <div class="wrap split">
+    <div class="split__art reveal" aria-hidden="true">
+      <svg viewBox="0 0 600 500">
+        <rect width="600" height="500" fill="#e9dfd1"/>
+        <path d="M0 350 Q150 290 300 340 T600 330 V500 H0 Z" fill="#6b6f47"/>
+        <path d="M0 415 Q200 375 400 415 T600 405 V500 H0 Z" fill="#4d5235"/>
+        <circle cx="475" cy="115" r="62" fill="#c2974a" opacity=".75"/>
+        <g fill="#5a1f2b"><circle cx="185" cy="195" r="11"/><circle cx="206" cy="214" r="11"/><circle cx="164" cy="214" r="11"/><circle cx="185" cy="233" r="11"/><circle cx="216" cy="237" r="11"/><circle cx="154" cy="237" r="11"/><circle cx="185" cy="255" r="11"/></g>
+        <path d="M185 182 C190 168 206 164 212 173" fill="none" stroke="#6b6f47" stroke-width="4"/>
+      </svg>
+      <div class="badge"><b>60</b><span>Years</span></div>
+    </div>
+    <div class="split__text reveal">
+      <p class="eyebrow">Our Estate</p>
+      <h2>A family, a hillside,<br/>a hundred harvests.</h2>
+      <p>In 1962, Elena and Thomas Nightingale planted their first rows of cabernet on a windswept slope above the valley. They believed great wine is not made in a cellar but grown in the ground, season by season, with hands that know each vine.</p>
+      <p>Today we farm sustainably, harvest by hand, and bottle only what the land gives us. No shortcuts, no compromises, just honest wine that tastes of this singular place.</p>
+      <a href="#wines" class="btn">Discover the Collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Experience ===== -->
+<section class="section section--sand">
+  <div class="wrap center">
+    <p class="eyebrow reveal">What Awaits You</p>
+    <h2 class="reveal">The Nightingale Experience</h2>
+    <div class="divider reveal"></div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__art"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#5a1f2b"/><path d="M200 40 q-18 50 0 90 q18 -40 0 -90Z" fill="#c2974a"/><rect x="194" y="125" width="12" height="40" fill="#c2974a"/><rect x="170" y="163" width="60" height="8" rx="4" fill="#c2974a"/></svg></div>
+        <div class="card__body"><h3>Estate Wines</h3><p>Small-lot reds, whites, and rosé grown, fermented, and aged entirely on our property.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="card__art"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#6b6f47"/><path d="M0 140 Q200 100 400 140 V200 H0Z" fill="#4d5235"/><g stroke="#3c4029" stroke-width="3"><path d="M80 200 L130 140"/><path d="M200 200 L220 140"/><path d="M320 200 L300 140"/></g></svg></div>
+        <div class="card__body"><h3>Vineyard Tours</h3><p>Walk the rows with the family, then enjoy a guided tasting at the cellar door.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="card__art"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#b15b3c"/><circle cx="200" cy="100" r="64" fill="none" stroke="#f7f2ea" stroke-width="3"/><path d="M162 100 q38 40 76 0" fill="none" stroke="#f7f2ea" stroke-width="3"/><circle cx="200" cy="72" r="8" fill="#f7f2ea"/></svg></div>
+        <div class="card__body"><h3>Events &amp; Tastings</h3><p>Sunset harvest dinners and barrel tastings beneath the ancient oaks.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats ===== -->
+<section class="section section--wine">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><span class="stat__num" data-target="60">0</span><p>Years of Craft</p></div>
+      <div class="stat reveal"><span class="stat__num" data-target="40">0</span><p>Hillside Acres</p></div>
+      <div class="stat reveal"><span class="stat__num" data-target="3">0</span><p>Generations</p></div>
+      <div class="stat reveal"><span class="stat__num" data-target="6">0</span><p>Estate Wines</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Wines ===== -->
+<section class="section" id="wines">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Estate Grown · Hand Harvested</p>
+    <h2 class="reveal">Our Wines</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="max-width:620px;margin:0 auto">Each vintage reflects a single season on our hillside. These are our current releases.</p>
+    <div class="wine-grid">
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#3c1a22"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#5a1f2b"/><rect x="32" y="112" width="40" height="70" fill="#e9dfd1"/></svg></div><div class="wine__body"><p class="wine__meta">Red · 2019</p><h3>Reserve Cabernet</h3><p class="wine__notes"><strong>Notes:</strong> Blackcurrant, cedar, dark cherry, and cocoa. Polished tannins, a long graceful finish.</p><span class="wine__price">$68</span></div></article>
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#3c1a22"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#7a2e38"/><rect x="32" y="112" width="40" height="70" fill="#e9dfd1"/></svg></div><div class="wine__body"><p class="wine__meta">Red · 2021</p><h3>Hillside Pinot Noir</h3><p class="wine__notes"><strong>Notes:</strong> Red raspberry and rose petal with forest floor. Silky, with a savory close.</p><span class="wine__price">$54</span></div></article>
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#5c5a2a"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#c2b06a"/><rect x="32" y="112" width="40" height="70" fill="#f7f2ea"/></svg></div><div class="wine__body"><p class="wine__meta">White · 2022</p><h3>Estate Chardonnay</h3><p class="wine__notes"><strong>Notes:</strong> Meyer lemon, white peach, toasted hazelnut. Bright minerality, a clean saline lift.</p><span class="wine__price">$42</span></div></article>
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#3c1a22"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#8a3a2e"/><rect x="32" y="112" width="40" height="70" fill="#e9dfd1"/></svg></div><div class="wine__body"><p class="wine__meta">Red · 2020</p><h3>Old Vine Zinfandel</h3><p class="wine__notes"><strong>Notes:</strong> Brambly blackberry, fig, black pepper from 1962 vines. Bold yet balanced.</p><span class="wine__price">$58</span></div></article>
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#5c5a2a"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#d8c98a"/><rect x="32" y="112" width="40" height="70" fill="#f7f2ea"/></svg></div><div class="wine__body"><p class="wine__meta">White · 2023</p><h3>Dry Sauvignon Blanc</h3><p class="wine__notes"><strong>Notes:</strong> Grapefruit, gooseberry, fresh-cut grass. Vibrant and zesty with a stony backbone.</p><span class="wine__price">$38</span></div></article>
+      <article class="wine reveal"><div class="wine__art"><svg viewBox="0 0 104 240"><rect x="40" y="8" width="24" height="54" fill="#3c1a22"/><rect x="28" y="54" width="48" height="176" rx="14" fill="#9e2f4a"/><rect x="32" y="112" width="40" height="70" fill="#e9dfd1"/></svg></div><div class="wine__body"><p class="wine__meta">Rosé · 2023</p><h3>Sunset Rosé</h3><p class="wine__notes"><strong>Notes:</strong> Wild strawberry, watermelon, citrus blossom. Dry, crisp, refreshing.</p><span class="wine__price">$34</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section class="section section--sand" id="gallery">
+  <div class="wrap center">
+    <p class="eyebrow reveal">A Glimpse of the Estate</p>
+    <h2 class="reveal">Gallery</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="max-width:620px;margin:0 auto">Moments from the vines, the cellar, and the table. Click any image to view it full-screen.</p>
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<!-- ===== Events ===== -->
+<section class="section section--wine" id="events">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow reveal">Come Walk the Rows</p><h2 class="reveal">Tours &amp; Events</h2><div class="divider reveal"></div><p class="reveal" style="max-width:620px;margin:0 auto">Intimate, unhurried gatherings rooted in place. Reservations required.</p></div>
+    <div style="margin-top:3rem">
+      <article class="event reveal"><div class="event__date"><div class="event__day">14</div><div class="event__mon">Jun</div></div><div><h3>Guided Vineyard Walk &amp; Tasting</h3><p>A 90-minute stroll with the winemaker, then a flight of four estate wines. Saturdays, 10:00 AM.</p></div><div class="event__price">$45</div></article>
+      <article class="event reveal"><div class="event__date"><div class="event__day">21</div><div class="event__mon">Jun</div></div><div><h3>Barrel Room Reserve Tasting</h3><p>A seated tasting of library vintages in our cool stone cellar. Limited to twelve guests. 2:00 PM.</p></div><div class="event__price">$85</div></article>
+      <article class="event reveal"><div class="event__date"><div class="event__day">05</div><div class="event__mon">Jul</div></div><div><h3>Sunset Harvest Dinner</h3><p>A five-course feast beneath the oaks, each dish paired with an estate wine. Live music. 6:30 PM.</p></div><div class="event__price">$165</div></article>
+      <article class="event reveal"><div class="event__date"><div class="event__day">19</div><div class="event__mon">Jul</div></div><div><h3>Blending Workshop</h3><p>Blend your own bottle from estate lots, take it home, and enjoy lunch on the terrace. 11:00 AM.</p></div><div class="event__price">$120</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="center"><p class="eyebrow reveal">We'd Love to Hear From You</p><h2 class="reveal">Contact &amp; Visit</h2><div class="divider reveal"></div></div>
+    <div class="contact-grid" style="margin-top:3rem">
+      <div class="contact-info reveal">
+        <h3>Plan Your Visit</h3>
+        <p>The cellar door is open Thursday through Sunday. Tastings are by appointment so we can give every guest our full attention.</p>
+        <p class="label">Estate Address</p><p>1820 Vineyard Ridge Road<br/>Santa Clara Valley, CA 95120</p>
+        <p class="label">Tasting Room Hours</p><p>Thu – Sun · 11:00 AM – 5:00 PM<br/>Mon – Wed · By appointment</p>
+        <p class="label">Get in Touch</p><p>(408) 555-0192<br/>hello@nightingalevineyard.com</p>
+      </div>
+      <div class="reveal">
+        <h3>Send an Inquiry</h3>
+        <!-- Replace yourFormId with your Formspree ID to receive emails -->
+        <form class="form" id="contactForm" action="https://formspree.io/f/yourFormId" method="POST">
+          <input type="text" name="name" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+          <select name="interest" required>
+            <option value="" disabled selected>I'm interested in…</option>
+            <option>Booking a tasting or tour</option><option>Purchasing wine</option><option>Wine club membership</option><option>Private events</option>
+          </select>
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn btn--gold">Send Inquiry</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div><h4>Nightingale Family</h4><p>Honest, hand-crafted estate wines of rare elegance. Family-owned since 1962.</p></div>
+    <div><h4>Explore</h4><a href="#story">The Estate</a><a href="#wines">Our Wines</a><a href="#gallery">Gallery</a><a href="#events">Tours &amp; Tastings</a><a href="#contact">Visit Us</a></div>
+    <div><h4>Contact</h4><p>1820 Vineyard Ridge Rd<br/>Santa Clara Valley, CA</p><p>(408) 555-0192</p><p>hello@nightingalevineyard.com</p></div>
+  </div>
+  <div class="footer__bottom">© <span class="year"></span> Nightingale Family Vineyard. Please enjoy responsibly. Must be 21+.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
